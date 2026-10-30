@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prism Point Studios — Fun, memorable games on Roblox</title>
+  <meta name="description" content="Prism Point Studios is an independent game studio building fun, memorable games on Roblox. Explore our games and join our community.">
+  <meta name="theme-color" content="#04050b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prism Point Studios">
+  <meta property="og:description" content="Fun, memorable games on Roblox — refracted from one bright idea.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ========================== LIGHT FIELD BACKGROUND ==========================
+       A single pre-rendered image (assets/images/bg/light-field.webp): no live blur,
+       so it costs nothing while scrolling. -->
+  <div class="light-field" aria-hidden="true"><div class="lf-layer" data-lf></div></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================================== NAV ================================== -->
+  <header class="site-header">
+    <nav class="nav glass" aria-label="Main">
+      <a class="brand" href="#home" aria-label="Prism Point Studios — home">
+        <img class="brand-mark" src="assets/images/logo.svg" alt="" width="30" height="30">
+        <span class="brand-name">Prism Point <span>Studios</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#games">Our Games</a></li>
+        <li><a class="nav-link" href="#about">About Us</a></li>
+        <li><a class="nav-link" href="#community">Community</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn--light btn--sm" href="#community" data-link="robloxGroup">
+          Roblox Group
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a class="mobile-link" href="#home">Home</a></li>
+      <li><a class="mobile-link" href="#games">Our Games</a></li>
+      <li><a class="mobile-link" href="#about">About Us</a></li>
+      <li><a class="mobile-link" href="#community">Community</a></li>
+    </ul>
+    <a class="btn btn--light" href="#community" data-link="robloxGroup">Join our Roblox Group</a>
+  </div>
+
+  <main id="main">
+    <!-- ================================== HERO ================================== -->
+    <section class="section hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+
+        <!-- Crystal behind the glass: sharp outside, frosted through the card -->
+        <div class="hero-crystal" aria-hidden="true">
+          <div class="hero-layer" data-depth="26">
+            <svg viewBox="0 0 600 600">
+              <defs>
+                <linearGradient id="cA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#7d8dff" stop-opacity=".8"/></linearGradient>
+                <linearGradient id="cB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f5ff"/><stop offset=".55" stop-color="#a9b6ff" stop-opacity=".85"/><stop offset="1" stop-color="#ffcfb8" stop-opacity=".7"/></linearGradient>
+                <linearGradient id="cC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4655e6"/><stop offset="1" stop-color="#0a0f33"/></linearGradient>
+                <linearGradient id="cD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fa3ff"/><stop offset=".7" stop-color="#b9a8ff"/><stop offset="1" stop-color="#8fe3ff" stop-opacity=".8"/></linearGradient>
+                <linearGradient id="rayFadeGrad" x1="340" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+                <linearGradient id="rayGrad" x1="0" y1="110" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#8fe3ff"/>
+                  <stop offset=".35" stop-color="#8fa3ff"/>
+                  <stop offset=".7" stop-color="#b9a8ff"/>
+                  <stop offset="1" stop-color="#ffcfb8"/>
+                </linearGradient>
+                <mask id="rayFade" maskUnits="userSpaceOnUse" x="300" y="0" width="760" height="600"><rect x="300" y="0" width="760" height="600" fill="url(#rayFadeGrad)"/></mask>
+                <filter id="cGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+              </defs>
+              <circle cx="300" cy="300" r="290" fill="none" stroke="rgba(255,255,255,.14)" stroke-dasharray="1 9"/>
+              <!-- light beam in, spectrum out -->
+              <line x1="-160" y1="400" x2="250" y2="300" stroke="#fff" stroke-width="14" opacity=".25" filter="url(#cGlow)"/>
+              <line x1="-160" y1="400" x2="250" y2="300" stroke="#fff" stroke-width="3" opacity=".85"/>
+              <g mask="url(#rayFade)">
+                <path d="M340 296 L1000 110 L1000 400 Z" fill="url(#rayGrad)" opacity=".5"/>
+              </g>
+              <g class="crystal">
+                <polygon points="300,70 430,300 300,245" fill="url(#cB)"/>
+                <polygon points="300,70 170,300 300,245" fill="url(#cA)"/>
+                <polygon points="170,300 300,245 430,300 300,335" fill="rgba(255,255,255,.35)"/>
+                <polygon points="170,300 300,335 300,530" fill="url(#cC)"/>
+                <polygon points="430,300 300,335 300,530" fill="url(#cD)"/>
+                <g fill="none" stroke="rgba(255,255,255,.85)" stroke-width="1.4" stroke-linejoin="round">
+                  <polygon points="300,70 430,300 300,530 170,300"/>
+                  <path d="M300 70 L300 245 M170 300 L300 245 L430 300 M170 300 L300 335 L430 300 M300 335 L300 530"/>
+                </g>
+                <circle cx="300" cy="70" r="22" fill="#fff" opacity=".5" filter="url(#cGlow)"/>
+                <circle cx="300" cy="70" r="5" fill="#fff"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Frosted glass hero card -->
+        <div class="hero-card glass glass--interactive" data-sheen>
+          <span class="rainbow-edge" aria-hidden="true"></span>
+          <!-- What the glass "sees" behind it: a pre-blurred copy of the crystal -->
+          <div class="hero-frost" aria-hidden="true">
+            <div class="hero-frost-box">
+              <div class="hero-frost-layer" data-depth="22">
+                <img src="assets/images/bg/crystal-frost.webp" alt="" width="700" height="500" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="hero-corners">
+            <span class="micro intro" data-delay="500">Independent game studio</span>
+            <span class="micro intro" data-delay="560">Made for Roblox<span class="micro-dot"></span>Built to be played</span>
+          </div>
+
+          <div class="hero-center">
+            <h1 class="hero-title" id="hero-title" data-split><span class="rainbow-text">Prism</span> Point<br>Studios</h1>
+            <span class="pill hero-tag intro" data-delay="700">Fun, memorable games</span>
+            <p class="hero-lead intro" data-delay="820">
+              We take one bright idea and refract it into a world worth playing — and worth coming back to.
+            </p>
+            <div class="hero-actions intro" data-delay="940">
+              <a class="btn btn--light btn--lg" href="#games" data-magnetic>
+                Explore Our Games
+                <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--glass btn--lg" href="#community" data-magnetic>Join Our Community</a>
+            </div>
+          </div>
+
+          <div class="hero-bottom">
+            <span class="micro scroll-hint intro" data-delay="1100"><span class="scroll-hint-line" aria-hidden="true"></span>Scroll to explore</span>
+            <a class="micro intro" data-delay="1160" href="#games">See our games →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== GAMES ================================== -->
+    <section class="section" id="games" aria-labelledby="games-title">
+      <div class="container">
+        <div class="section-head">
+          <div data-reveal>
+            <span class="pill pill--quiet">Our Games</span>
+            <h2 class="section-title" id="games-title" data-split="scroll">Built to be played.<br><span class="soft">Made to be remembered.</span></h2>
+          </div>
+          <p class="section-intro" data-words>
+            Every Prism Point game starts with one bright idea and grows into a world players want to come back to.
+          </p>
+        </div>
+
+        <!-- Game carousel: the active game sits in the middle, neighbours peek in, faded, at the sides.
+             ADDING A GAME: copy one <article class="slide ..."> block, give it data-game="yourKey"
+             (and add yourKey to PPS_GAMES in js/config.js for live stats). Slides are ordered as written. -->
+        <div class="carousel" data-carousel data-reveal="scale" role="region" aria-roledescription="carousel" aria-label="Our games">
+          <div class="carousel-viewport" data-carousel-viewport>
+            <div class="carousel-track">
+
+              <!-- Mine an Egg -->
+              <article class="slide feature glass glass--interactive" data-game="mineAnEgg" data-sheen aria-roledescription="slide" aria-label="Mine an Egg">
+                <div class="feature-media">
+                  <img src="assets/images/games/mine-an-egg.jpg" fetchpriority="high" alt="Mine an Egg thumbnail: a Roblox player with a purple crystal pickaxe cracking open a glowing obsidian egg" width="1024" height="572" decoding="async">
+                  <div class="feature-badges">
+                    <span class="pill"><span class="pill-dot" aria-hidden="true"></span>Live on Roblox</span>
+                    <span class="pill">Featured</span>
+                  </div>
+                </div>
+                <div class="feature-body">
+                  <div>
+                    <h3 class="feature-title" data-split="scroll">Mine an Egg</h3>
+                  </div>
+
+                  <!-- Live stats (filled from Roblox by js/main.js) -->
+                  <dl class="stats" data-stats aria-live="polite">
+                    <div class="stat stat--live">
+                      <dt class="stat-label"><span class="stat-dot" aria-hidden="true"></span>Playing now</dt>
+                      <dd class="stat-value" data-stat="playing">—</dd>
+                    </div>
+                    <div class="stat">
+                      <dt class="stat-label">Visits</dt>
+                      <dd class="stat-value" data-stat="visits">—</dd>
+                    </div>
+                    <div class="stat">
+                      <dt class="stat-label">Favorites</dt>
+                      <dd class="stat-value" data-stat="favorites">—</dd>
+                    </div>
+                    <div class="stat">
+                      <dt class="stat-label">Liked</dt>
+                      <dd class="stat-value" data-stat="likes">—</dd>
+                    </div>
+                  </dl>
+
+                  <div class="feature-actions">
+                    <a class="btn btn--light btn--lg" href="#community" data-link="mineAnEgg" data-magnetic>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+                      Play on Roblox
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Coming soon #1 -->
+              <article class="slide feature feature--soon glass glass--interactive" data-sheen aria-roledescription="slide" aria-label="Coming soon">
+                <div class="feature-media">
+                  <img src="assets/images/games/coming-soon-1.svg" alt="" width="1024" height="572" decoding="async">
+                  <div class="feature-badges">
+                    <span class="pill">In development</span>
+                  </div>
+                </div>
+                <div class="feature-body">
+                  <div>
+                    <h3 class="feature-title">Next world</h3>
+                  </div>
+                  <div class="feature-actions">
+                    <a class="btn btn--glass btn--lg" href="#community">Get notified</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Coming soon #2 -->
+              <article class="slide feature feature--soon glass glass--interactive" data-sheen aria-roledescription="slide" aria-label="Your idea">
+                <div class="feature-media">
+                  <img src="assets/images/games/coming-soon-2.svg" alt="" width="1024" height="572" decoding="async">
+                  <div class="feature-badges">
+                    <span class="pill">Community ideas</span>
+                  </div>
+                </div>
+                <div class="feature-body">
+                  <div>
+                    <h3 class="feature-title">Your idea here?</h3>
+                  </div>
+                  <div class="feature-actions">
+                    <a class="btn btn--glass btn--lg" href="#community">Share an idea</a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Previous game" data-carousel-prev>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next game" data-carousel-next>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+
+          <div class="carousel-dots" data-carousel-dots role="tablist" aria-label="Choose a game"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== ABOUT ================================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <!-- Interactive dial -->
+        <div class="dial-card glass glass--interactive" data-reveal="left" data-sheen data-dial>
+          <div class="tile-head">
+            <div>
+              <p class="tile-title">How we build</p>
+              <p class="tile-sub">Pick a principle</p>
+            </div>
+            <span class="pill pill--quiet" data-dial-count>1 / 3</span>
+          </div>
+
+          <div class="dial-tabs" role="tablist" aria-label="Studio principles">
+            <button class="dial-tab" type="button" role="tab" aria-selected="true"
+              data-value="Fun first" data-frac="0.34"
+              data-caption="If it isn't fun in the first minute, it isn't finished.">Fun first</button>
+            <button class="dial-tab" type="button" role="tab" aria-selected="false"
+              data-value="Memorable" data-frac="0.67"
+              data-caption="Worlds with one clear idea and a hook you'll talk about.">Memorable</button>
+            <button class="dial-tab" type="button" role="tab" aria-selected="false"
+              data-value="With players" data-frac="1"
+              data-caption="We listen, iterate and keep our games growing with the community.">With players</button>
+          </div>
+
+          <div class="dial" aria-hidden="true">
+            <svg viewBox="0 0 400 400">
+              <defs>
+                <linearGradient id="dialGrad" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8fe3ff"/>
+                  <stop offset=".4" stop-color="#8fa3ff"/>
+                  <stop offset=".75" stop-color="#c3b5ff"/>
+                  <stop offset="1" stop-color="#ffcfb8"/>
+                </linearGradient>
+                <filter id="dialGlow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <g data-dial-ticks></g>
+              <!-- track: 270° arc starting bottom-left -->
+              <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(0,20,28,.35)" stroke-width="12" stroke-linecap="round"
+                stroke-dasharray="754 1006" transform="rotate(135 200 200)"/>
+              <circle class="dial-arc" data-dial-arc cx="200" cy="200" r="160" fill="none" stroke="url(#dialGrad)" stroke-width="12" filter="url(#dialGlow)" stroke-linecap="round"
+                stroke-dasharray="754 1006" stroke-dashoffset="754" transform="rotate(135 200 200)"/>
+              <g class="dial-knob" data-dial-knob>
+                <circle cx="360" cy="200" r="13" fill="#fff"/>
+                <circle cx="360" cy="200" r="22" fill="#fff" opacity=".18"/>
+              </g>
+              <text x="70" y="360" fill="rgba(255,255,255,.55)" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">Idea</text>
+              <text x="330" y="360" fill="rgba(255,255,255,.55)" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">World</text>
+            </svg>
+            <div class="dial-face">
+              <span class="dial-face-label">Principle</span>
+              <span class="dial-face-value" data-dial-value>Fun first</span>
+            </div>
+          </div>
+          <p class="dial-caption" data-dial-caption aria-live="polite">If it isn't fun in the first minute, it isn't finished.</p>
+        </div>
+
+        <!-- Copy -->
+        <div class="about-copy-card glass glass--interactive" data-reveal="right" data-delay="120" data-sheen>
+          <div>
+            <span class="pill pill--quiet">About Us</span>
+            <h2 class="section-title" id="about-title" data-split="scroll">A single point of light, split into something bigger.</h2>
+            <p class="about-copy" data-scrub>
+              That's how we think about games. Prism Point Studios is an independent studio that takes a simple, playful idea and refracts it into an experience full of discovery, progress and moments you'll want to share. We make games that feel good from the first click and stay with you long after.
+            </p>
+          </div>
+          <div class="about-chips pop-in">
+            <span class="pill">Independent</span>
+            <span class="pill">Roblox-first</span>
+            <span class="pill">Player-driven</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ COMMUNITY ================================ -->
+    <section class="section" id="community" aria-labelledby="community-title">
+      <div class="container">
+        <div class="community-card glass glass--interactive" data-reveal="scale" data-particles data-sheen>
+          <div class="hero-corners">
+            <span class="micro">Community</span>
+            <span class="micro">Discord<span class="micro-dot"></span>Roblox Group</span>
+          </div>
+          <div class="community-center">
+            <h2 class="community-title" id="community-title" data-split="scroll">Every game is better with your colours in it.</h2>
+            <p class="community-text" data-words>
+              Join the Prism Point community to catch updates first, share your best finds, suggest ideas and play alongside the people who make the games.
+            </p>
+            <div class="community-actions pop-in">
+              <a class="btn btn--light btn--lg" href="#community" data-link="discord" data-magnetic>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+                Join our Discord
+              </a>
+              <a class="btn btn--glass btn--lg" href="#community" data-link="robloxGroup" data-magnetic>Roblox Group</a>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <span class="micro">Open to everyone</span>
+            <span class="micro">Prism Point Studios</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================== FOOTER ================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-card glass glass--soft">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="#home" aria-label="Prism Point Studios — home">
+              <img class="brand-mark" src="assets/images/logo.svg" alt="" width="30" height="30">
+              <span class="brand-name">Prism Point <span>Studios</span></span>
+            </a>
+            <p class="footer-tagline">Fun, memorable games for Roblox — refracted from one bright idea.</p>
+          </div>
+          <nav aria-label="Footer">
+            <p class="footer-heading">Explore</p>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#games">Our Games</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#community">Community</a></li>
+            </ul>
+          </nav>
+          <div>
+            <p class="footer-heading">Platforms</p>
+            <ul class="footer-links">
+              <li><a href="#community" data-link="robloxGroup">Roblox Group</a></li>
+              <li><a href="#community" data-link="discord">Discord</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> Prism Point Studios. Not affiliated with Roblox Corporation.</span>
+          <a class="back-to-top" href="#home" aria-label="Back to top">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

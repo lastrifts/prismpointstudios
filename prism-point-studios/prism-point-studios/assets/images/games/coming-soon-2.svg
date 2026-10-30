@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 572" width="1024" height="572">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#231a55"/><stop offset="1" stop-color="#05060f"/></radialGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fe3ff"/><stop offset=".4" stop-color="#8fa3ff"/><stop offset=".75" stop-color="#c3b5ff"/><stop offset="1" stop-color="#ffcfb8"/></linearGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1024" height="572" fill="url(#bg)"/>
+  <circle cx="512" cy="286" r="160" fill="#ae9fff" opacity=".3" filter="url(#g)"/>
+  <!-- light bulb made of facets -->
+  <g transform="translate(512 270)" fill="none" stroke="url(#s)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-70 40 C-120 -10 -100 -120 0 -130 C100 -120 120 -10 70 40 C55 55 45 70 45 95 H-45 C-45 70 -55 55 -70 40 Z"/>
+    <path d="M-40 120 H40 M-30 145 H30"/>
+    <path d="M0 -130 L-30 -40 L0 95 L30 -40 Z" stroke-opacity=".6"/>
+    <path d="M-100 -40 H100" stroke-opacity=".35"/>
+  </g>
+  <g stroke="#cdd6ff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round">
+    <path d="M512 60 V95 M360 120 L382 145 M664 120 L642 145 M300 270 H335 M724 270 H689"/>
+  </g>
+  <g fill="#ffffff"><circle cx="200" cy="160" r="2"/><circle cx="840" cy="140" r="2"/><circle cx="780" cy="450" r="2.5"/><circle cx="240" cy="430" r="1.5"/></g>
+</svg>

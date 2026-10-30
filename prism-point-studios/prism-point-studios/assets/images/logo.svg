@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <defs>
+    <linearGradient id="pps-logo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#CDD6FF"/>
+      <stop offset=".5" stop-color="#8FA3FF"/>
+      <stop offset="1" stop-color="#FFCFB8"/>
+    </linearGradient>
+  </defs>
+  <path d="M20 3 L36 33 L4 33 Z" fill="none" stroke="url(#pps-logo)" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="20" cy="3.5" r="2.6" fill="#FFFFFF"/>
+</svg>
